@@ -1,0 +1,31 @@
+<div id="space"></div>
+<div id="container-space">
+<div  class="container-fluid">
+
+    <div class="row well">
+        <div class="col-xs-12 col-md-4">
+            <label><strong>{{user.name}} </strong></label> qui puoi inviare una richiesta di aiuto: <p></p>
+            Seleziona la tua categoria: <p></p><input required="" placeholder="Categoria tutorial richesto" type="text" class="form-control" ng-model="video.categoria">
+            <p></p>
+
+
+            <div class="row">Coachs list:<br>
+                <div class="col-xs-12 col-md-4">
+                    <ul class="media-list">
+                        <li class="media" ng-repeat="user in coachs  | filter:{tipo:'Coach'}| filter: {categoria:video.categoria}" >
+                            <a class="plain-link" href="#/chat/{{user.$id}}">
+                                <div id="user"  class="media-body">
+                                    <h4 class="media-heading"><strong><label>{{user.name}}</label> </strong>{{user.surname}}</h4>
+                                    <img class="img-chat img-circle img-responsive" ng-src="../{{user.img_url}}" >
+                                </div>
+                            </a>
+                            <hr/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div></div>

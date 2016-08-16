@@ -1,0 +1,38 @@
+#user_name{
+    text-align: center;
+}
+#follow{
+    background-color: #8f3efd;
+}
+#foto_profilo{
+    width: 60%;
+    height: 60%;
+
+}
+.info1{
+    background-color: #a07bff;
+}
+
+.info2{
+    background-color: #6417ff;
+}
+
+
+.thumbnail {
+    background-color:transparent;
+    border:none;
+}
+
+.media-body{
+    text-align: center;
+
+}
+
+.info{
+    font-size: 100%;
+}
+
+#labels{
+    text-align: center;
+}
+

@@ -1,0 +1,76 @@
+<div id="container-space"></div>
+<div  class="container-fluid">
+    <div class="media-list">
+
+            <div class="well well-sm">
+                <a  href="#/sfide"  data-toggle="modal" data-target="#myinfoModal"> <span class="glyphicon glyphicon-info-sign btn"></span></a>
+                <img id="image" ng-src="../images/sfida_title.png">
+                <div class="media">
+
+                    <div class="media-body">
+                        <a href="#/challenge1" class="btn btn-lg btnlarge btn-default">
+                            <img ng-src="../images/pugni.png">
+                        </a>
+                        <a href="#/sfide" data-toggle="modal" data-target="#myModal" class="btn btn-lg btnlarge btn-default">
+                            <img  ng-src="../images/dado.png"></a><p></p>
+
+                        <a href="#/sfide"  data-toggle="modal" data-target="#myModal"  class="btn btn-lg btnlarge btn-default">
+                            <img  ng-src="../images/carte.png"></a>
+                        <a  href="#/sfide"  data-toggle="modal" data-target="#myModal" class="btn btn-lg btnlarge btn-default">
+                            <img ng-src="../images/bandiere.png"></a>
+                        <label>Richiedi un tutorial!</label><br>
+                        <a  href="#/ask"   class="btn btn-lg btnlarge btn-default">
+                            <img ng-src="../images/ask.png"></a>
+                    </div>
+
+
+
+                    <!-- Modal Sfide Bloccate -->
+                    <div class="modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="modal_title">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="modal_title">Sfida non attiva</h4>
+                                </div>
+                                <div class="modal-body">
+                                            Per poter accedere a questa sfida devi guadagnare altri punti!
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal Info-->
+                    <div class="modal fade"  id="myinfoModal" tabindex="-1" role="dialog" aria-labelledby="modal_info">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="modal_info">Tipologie sfide:</h4>
+                                </div>
+                                <div class="modalInfo-body">
+                                    <img ng-src="../images/pugni.png"> Coach VS Trainee <br>
+                                    <img  ng-src="../images/dado.png"> Coach VS Coaches + Trainee's goal <br>
+                                    <img  ng-src="../images/carte.png"> Trainee VS Team Coaches  <br>
+                                    <img ng-src="../images/bandiere.png">Trainee VS Trainee <br>
+                                    <img ng-src="../images/ask.png">Richiedi un tutorial <br>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+    </div>
+
+
+</div>
+

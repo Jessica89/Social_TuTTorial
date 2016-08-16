@@ -1,0 +1,20 @@
+
+<div id="space"></div>
+<div id="container-space">
+<div id="cerca">
+    <input id="search" ng-model="query" placeholder=" Search..">
+</div>
+<p></p>
+
+<ul  class="media-list">
+    <li  class="media well well-sm" ng-repeat="user in users | filter:query">
+        <a class="plain-link" href="#/users/{{user.$id}}">
+            <div  id="user_list" class="container">
+                <strong><label>{{user.name}}</label></strong></h4>
+                <p>{{user.surname}}</p>
+                <img id="foto_profilo" class="img-circle img-responsive" ng-src="../{{user.img_url}}" >
+            </div>
+        </a>
+    </li>
+</ul>
+</div></div>

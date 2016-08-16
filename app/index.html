@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tuttorialApp" class="no-js lt-ie9 lt-ie8 lt-ie7">
+<html lang="en" ng-app="tuttorialApp" class="no-js lt-ie9 lt-ie8">
+<html lang="en" ng-app="tuttorialApp" class="no-js lt-ie9">
+<html lang="en" ng-app="tuttorialApp" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tuttorial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+    <link rel="icon" type="image/png" href="../images/favicon.png" >
+    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="sytle.css"/>
+
+    <!--jquery per modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../scripts/js/like-dislike.js"></script>
+
+    <script src="../scripts/bootstrap.min.js"></script>
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+</head>
+
+<body>
+<!-- nome social-->
+<header>
+    <div class="container-fluid">
+            <div id="logo"  class="navbar-header navbar-center nav ">
+                <img  src="../images/title.png" alt="Tuttorial" >
+            </div>
+    </div>
+</header>
+
+<!--bottone menu -->
+<div id="button-space"></div>
+
+<div id="menu" class="col-xs-12">
+            <div class="btn-group ">
+                <button type="button" class="btn btn-default btn" >
+                    <a ng-href="#" back-button><span class="glyphicon glyphicon-chevron-left"></span></a>
+                </button>
+                <button type="button" class="btn btn-default btn" >
+                    <a ng-href="#/sfide"><span class="glyphicon glyphicon-blackboard"></span></a>
+                </button>
+                <button type="button" class="btn btn-default btn" >
+                    <a href="#/cerca"><span class="glyphicon glyphicon-search"></span></a>
+                </button>
+                <button type="button" class="btn btn-default btn" >
+                    <a href="#/chat"><span class="glyphicon glyphicon-comment"></span></a>
+                </button>
+            </div>
+    </div>
+
+
+<!--ng-view direttiva per reiderizzare la vista -->
+<div ng-view></div>
+
+
+
+<!-- FOOTER -->
+<footer class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <ul class="nav navbar-center navbar-nav">
+            <li><a href="#/home"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="#add"><span class="glyphicon glyphicon-plus"></span></a></li>
+            <li><a href="#/users"><span class="glyphicon glyphicon-education"></span></a></li>
+            <li><a href="#/user-profile"><span class="glyphicon glyphicon-user"></span></a></li>
+        </ul>
+    </div>
+</footer>
+
+
+<!-- librerie e js -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src="../lib/angular/angular.min.js"></script>
+<script src="../lib/angular/angular-route.min.js"></script>
+<script src="../lib/angular/angular-resource.min.js"></script>
+
+<!-- Bootstrap -->
+
+<script src ="../scripts/ui-bootstrap-tpls-1.3.2.min.js"></script>
+<!-- File Upload -->
+<script src="../lib/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+<script src="../lib/ng-file-upload.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- iOS bouncing fix -->
+<script src="../lib/inobounce.min.js"></script>
+
+<script src="app.js"></script>
+<script src="home/home.js"></script>
+<script src="components/video/video.js"></script>
+<script src="components/video/video-service.js"></script>
+<script src="components/video/video-rating-service.js"></script>
+<script src="components/user/user.js"></script>
+<script src="components/user/chat-login-service.js"></script>
+<script src="components/user/user-service.js"></script>
+<script src="components/user/chat-service.js"></script>
+<script src="components/navigation/navigation.js"></script>
+<script src="components/navigation/back-directive.js"></script>
+<script src="components/navigation/nav-menu-directive.js"></script>
+<script src="components/prefer/prefer-service.js"></script>
+<script src="components/prefer/prefer.js"></script>
+<script src="users/users.js"></script>
+<script src="log-in/log-in.js"></script>
+<script src="profilo/profilo.js"></script>
+<script src="gallery_prefers/gallery_prefers.js"></script>
+<script src="add/add.js"></script>
+<script src="cerca/cerca.js"></script>
+<script src="sfide/sfide.js"></script>
+<script src="user-profile/user-profile.js"></script>
+<script src="users-list/users-list.js"></script>
+<script src="chat/chat.js"></script>
+<script src="ask/ask.js"></script>
+<script src="video-detail/video-detail.js"></script>
+<script src="gallery/gallery.js"></script>
+<script src="challenge1/challenge1.js"></script>
+<script src="challenge1-add/challenge1-add.js"></script>
+<script src="challenge1-details/challenge1-details.js"></script>
+<script src="challenge1-list/challenge1-list.js"></script>
+<script src="challenge-service/challenge-service.js"></script>
+
+
+<script src="../lib/angular/angular-sanitize.min.js"></script>
+<script src="../node_modules/videogular/videogular.js"></script>
+<script src="../node_modules/videogular-controls/vg-controls.js"></script>
+<script src="../node_modules/videogular-overlay-play/vg-overlay-play.js"></script>
+<script src="../node_modules/videogular-poster/vg-poster.js"></script>
+<script src="../node_modules/videogular-buffering/vg-buffering.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div id="space"></div>
+<div id="container-space">
+    <div class="col-xs-12 col-md-4"id="titolo_form">
+        <label >Lancia la tua sfida!</label>
+    <form ng-submit="addChallenge()">
+        <input type="text" class="form-control" ng-model="title" placeholder="Title...">
+        <p></p>
+        <input type="text" class="form-control" ng-model="video_url" placeholder="Url Video...">
+        <p></p>
+        <label for="sel2">Scegli categoria...</label>
+        <select multiple class="form-control" id="sel2" ng-model="category">
+            <option ng-repeat="category in categories" value="{{category.$id}}">
+                {{category.$value}}
+            </option>
+        </select>
+        <p></p>
+        <label><input type="submit" class="btn btn btn-default" value="Pubblica"></label>
+    </form>
+    </div>
+</div>

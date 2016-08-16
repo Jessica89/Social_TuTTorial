@@ -1,0 +1,25 @@
+<div id="container-space">
+<div id="space"></div>
+<div  class="container-fluid">
+    <div id="cerca">
+        <input id="search" ng-model="query" placeholder=" Search..">
+    </div> <p></p>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <ul class="media-list">
+            <li class="media" ng-repeat="user in users | filter:query">
+                <a class="plain-link" href="#/chat/{{user.$id}}">
+                    <div id="user"  class="media-body">
+                        <h4 class="media-heading"><strong><label>{{user.name}}</label> </strong>{{user.surname}}</h4>
+                        <img class="img-chat img-circle img-responsive" ng-src="../{{user.img_url}}" >
+                        <p>{{user.logged}}</p>
+                    </div>
+                </a>
+                <hr/>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+</div></div>

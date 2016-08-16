@@ -1,0 +1,13 @@
+<div id="container-space"></div>
+<form id="form" class="form-group" role="form" >
+    <p>
+        <label>Titolo video: </label><input id="titolo" required=""placeholder="Titolo video"  type="text" class="form-control" ng-model="video.titolo" ><br>
+        <label>Categoria tutorial: </label><input required="" placeholder="Categoria tutorial" type="text" class="form-control" ng-model="video.categoria"><br>
+        <label>Url tutorial: </label><input required="" placeholder="Url tutorial"  type="text" class="form-control" ng-model="video.video_url"><br>
+
+
+    </p>
+
+    <button  type="submit" class="btn btn-success"  ng-click="addVideo(video.titolo, video.categoria, video.video_url )">Aggiungi video</button>
+</form>
+

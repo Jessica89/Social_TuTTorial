@@ -1,0 +1,30 @@
+<div id="space"></div>
+<div id="container-space">
+            <div class="well well-sm container-fluid ">
+                <h4 id="user_name" class="media-heading"><label>{{user.name}} {{user.surname}}</label></h4>
+                <div class="media">
+                    <a class="thumbnail">
+                        <img id="foto_profilo" class="img-circle img-responsive" ng-src="../{{user.img_url}}" >
+                    </a>
+                    <div id="labels">
+                        <label>Tipologia: </label> {{user.tipo}} <br>
+                        <label>Categoria: </label> {{user.categoria}}</div>
+                    <div class="media-body">
+                       <a class="btn btn-lg btn-default" ng-click="auth.$unauth()"><span class="glyphicon glyphicon-log-out"></span></a>
+                       <a href="#/users/{{user.$id}}/prefers" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-heart"></span></a>
+                       <a href="#/users/{{user.$id}}/videos" class="btn btn-lg  btn-default"><span class="glyphicon glyphicon-film"></span></a>
+                        <p></p>
+
+                    </div>
+
+
+
+
+                </div>
+
+                </div>
+            </div>
+
+</div>
+
+

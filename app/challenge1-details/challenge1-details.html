@@ -1,0 +1,78 @@
+<div id="space"></div>
+<div id="container-space"  class="well">
+
+    <div ng-repeat="user in users  |filter: {$id:challenge.coach}">
+        <div  id="video_list" class="container">
+            <h4 class="media-heading"><strong><label>{{challenge.title}}</label></strong></h4>
+            <p>
+                Posted-by; <a class="plain-link" href="#/users/{{user.$id}}">{{user.name}}</a><br>
+                Tipo di sfida: {{challenge.type}}
+            </p>
+            <p></p>
+            <div ng-controller="AppCtrl as controller">
+                <div class="videogular-container">
+                    <videogular vg-player-ready="controller.onPlayerReady($API)" vg-complete="controller.onCompleteVideo()" vg-theme="controller.config.theme.url">
+                        <vg-media vg-src="controller.config.sources"
+                                  vg-tracks="controller.config.tracks">
+                        </vg-media>
+
+                        <vg-controls>
+                            <vg-play-pause-button></vg-play-pause-button>
+                            <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+                            <vg-scrub-bar>
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                            </vg-scrub-bar>
+                            <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+                            <vg-volume>
+                                <vg-mute-button></vg-mute-button>
+                                <vg-volume-bar></vg-volume-bar>
+                            </vg-volume>
+                            <vg-fullscreen-button></vg-fullscreen-button>
+                        </vg-controls>
+
+                        <vg-overlay-play></vg-overlay-play>
+                        <vg-buffering></vg-buffering>
+                        <vg-poster vg-url='controller.config.plugins.poster'></vg-poster>
+                    </videogular>
+                </div>
+                <p></p>
+                <div id="buttons">
+                    <a class="btn btn btn-default" ng-click="controller.setVideo(video.indice)">Watch This Video
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                    <a class="btn btn btn-default" ng-click="addPrefer(video.$id)">Prefer
+                        <span class="glyphicon glyphicon-heart"></span>
+                    </a>
+                </div>
+                <p></p>
+
+            </div>
+
+        </div>
+
+    </div>
+   <div class="col-xs-12 col-md-4">
+    <ul  class="row container-fluid">
+        <p></p>
+        <li class="well well-sm checked-comment" ng-repeat="comment in comments | filter: {$id : challenge.check}"><p></p>
+            <div ng-repeat="user in users  | filter: {$id:comment.user}">
+                <p>Risposta: {{comment.description}}<br>
+                    Posted-by; <a class="plain-link" href="#/users/{{user.$id}}">{{user.name}}</a>
+                </p>
+            </div>
+        </li>
+        <li class="well well-sm" ng-repeat="comment in comments | filter : !{$id : challenge.check}" ng-click="setCheck(comment.$id)"><p></p>
+            <div ng-repeat="user in users  | filter: {$id:comment.user}">
+                <p>Risposta: {{comment.description}}<br>
+                    Posted-by: <a class="plain-link" href="#/users/{{user.$id}}">{{user.name}}</a>
+                </p>
+            </div>
+        </li>
+    </ul>
+
+
+   </div>
+    <div >
+    <input type="text" class="form-control" ng-readonly="challenge.checkDone" ng-model="description" ng-keydown="addComment($event)" placeholder="Comment...">
+</div>
+</div>

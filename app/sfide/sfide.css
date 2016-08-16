@@ -1,0 +1,42 @@
+
+
+.thumbnail {
+    background-color:transparent;
+    border:none;
+    text-align: center;
+}
+
+.media-body{
+    text-align: center;
+
+}
+
+#sfida{
+    width: 120%;
+    height: 120%;
+    padding-right: 20%;
+
+}
+
+.btnlarge{
+    width: 45%;
+    height: auto;
+}
+
+
+.modal-body{
+    background-color: #903efe;
+    color: white;
+}
+
+#image{
+    width: 80%;
+    height:auto;
+    margin-left: 10%;
+ }
+
+.modalInfo-body img{
+    width: 10%;
+    height: 10%;
+    margin-left: 2%;
+}

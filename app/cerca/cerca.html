@@ -1,0 +1,66 @@
+
+<div id="container-space">
+    <div id="space"></div>
+<div id="cerca">
+    <input id="search" ng-model="query" placeholder=" Search..">
+</div>
+<p></p>
+<div >
+<ul  class="media-list">
+    <li class="well well-sm" ng-repeat="video in videos | filter:query"><p></p>
+        <a class="plain-link" href="#/videos/{{video.$id}}">
+            <h4 class="media-heading"><strong><label>{{video.titolo}}</label></strong></h4>
+        </a>
+        <div ng-repeat="user in users  |filter: {$id:video.user}">
+            <div  id="video_list" class="container">
+                <p>Categoria: {{video.categoria}}<br>
+                    Posted-by; <a class="plain-link" href="#/users/{{user.$id}}">{{user.name}}
+                    </a>
+                </p>
+                <p></p>
+
+                <div ng-controller="AppCtrl as controller">
+                    <div class="videogular-container">
+                        <videogular vg-player-ready="controller.onPlayerReady($API)" vg-complete="controller.onCompleteVideo()" vg-theme="controller.config.theme.url">
+                            <vg-media vg-src="controller.config.sources"
+                                      vg-tracks="controller.config.tracks">
+                            </vg-media>
+
+                            <vg-controls>
+                                <vg-play-pause-button></vg-play-pause-button>
+                                <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+                                <vg-scrub-bar>
+                                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                </vg-scrub-bar>
+                                <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+                                <vg-volume>
+                                    <vg-mute-button></vg-mute-button>
+                                    <vg-volume-bar></vg-volume-bar>
+                                </vg-volume>
+                                <vg-fullscreen-button></vg-fullscreen-button>
+                            </vg-controls>
+
+                            <vg-overlay-play></vg-overlay-play>
+                            <vg-buffering></vg-buffering>
+                            <vg-poster vg-url='controller.config.plugins.poster'></vg-poster>
+                        </videogular>
+                    </div>
+                    <p></p>
+                    <div id="buttons">
+                        <a class="btn btn btn-default" ng-click="controller.setVideo(video.indice)">Watch This Video
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn btn-default"ng-click="addPrefer(video.$id)">Prefer
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </a>
+            </div>
+
+    </li>
+</ul>
+</div></div>

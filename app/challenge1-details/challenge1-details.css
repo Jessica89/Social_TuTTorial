@@ -1,0 +1,38 @@
+#video_list{
+
+    text-align: center;
+}
+
+
+.checked-comment{
+    background: greenyellow;
+}
+
+.well{
+    margin-left: 5%;
+    margin-right: 1%;
+    width: 90%;
+}
+
+
+#space{
+    margin-bottom: 90px;
+}
+
+h4{
+    text-align: center;
+}
+
+
+
+.thumbnail {
+    background-color:transparent;
+    border:none;
+    text-align: center;
+}
+
+.media-body{
+    text-align: center;
+
+}
+

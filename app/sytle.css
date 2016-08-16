@@ -1,0 +1,119 @@
+@import "profilo/profilo.css";
+@import "home/home.css";
+@import "log-in/log-in.css";
+@import "users/users.css";
+@import "add/add.css";
+@import "cerca/cerca.css";
+@import "sfide/sfide.css";
+@import "video-detail/video-detail.css";
+@import "users-list/users-list.css";
+@import "chat/chat.css";
+@import "challenge1-list/challenge1-list.css";
+@import "add/add.css";
+@import "ask/ask.css";
+@import "challenge1/challenge1.css";
+@import "challenge1-add/challenge1-add.css";
+@import "challenge1-details/challenge1-details.css";
+@import "gallery/gallery.css";
+@import "gallery_prefers/gallery_prefers.css";
+@import "user-profile/user-profile.css";
+
+
+
+
+
+.videogular-container {
+    width: 220px;
+    height: 140px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.videogular-container.audio {
+    width: 728px;
+    height: 50px;
+}
+
+
+
+.videogular-container .skipButton {
+    position: absolute;
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    z-index: 99999;
+    color: white;
+    cursor: pointer;
+    background-color: #666666;
+    border: 2px #FFFFFF solid;
+    display: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+.navbar-nav > li > a {
+    font-size: 15px;
+
+}
+
+.navbar-nav {
+       margin-left: 20%;
+    }
+.navbar-nav > li {
+        float: left;
+    }
+.navbar-center {
+    margin: 0 auto;
+    display: table;
+    table-layout: auto;
+    float: none;
+    width: 100%;
+}
+.navbar-center > li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+}
+
+
+
+label{
+    color: #8f3efd;
+}
+
+#space{
+    margin-bottom: 90px;
+}
+
+
+
+header{
+    background-color: #903efe;
+}
+
+header img{
+    margin-left: 5%;
+    margin-right: auto;
+}
+a{
+    color: #777777;
+}
+
+#menu{
+    text-align: center;
+}
+
+#button-space{
+    margin-bottom: 20px;
+}
+
+
+#container-space{
+    margin-bottom: 90px;
+}
+
+
+

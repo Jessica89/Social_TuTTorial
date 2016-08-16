@@ -1,0 +1,30 @@
+#form-login{
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#form-login h2{
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.form-control {
+    box-sizing: border-box;
+    border: 2px solid #903efe;
+    border-radius: 4px;
+    background-color: white;
+    background-position: 10px 10px;
+    padding: 12px 20px 12px 40px;
+
+}
+
+.form-control:focus {
+    border-color: #d463fe;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+    0 0 8px rgba(132, 61, 254, 0.6);
+}
+
+button{
+    background-color: #903efe;
+    color: white;
+}

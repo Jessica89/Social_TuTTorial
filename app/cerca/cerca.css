@@ -1,0 +1,30 @@
+#cerca{
+    text-align: center;
+}
+
+li{
+    display: block;
+
+}
+
+#space{
+    margin-bottom: 90px;
+}
+
+#search{
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #903efe;
+    border-radius: 4px;
+    font-size: 16px;
+    background-image: url('http://i68.tinypic.com/70yvqv.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search:focus {
+    width: 70%;
+}

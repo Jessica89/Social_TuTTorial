@@ -1,0 +1,13 @@
+<div id="space"></div>
+<div id="container-space">
+<h4><label>{{user.name}}&rsquo;s Gallery</label></h4>
+        <ul  class="row container-fluid">
+            <li class="well well-sm" ng-repeat="video in videos | filter: {user:user.$id}"><p></p>
+                <a class="plain-link" href="#/videos/{{video.$id}}">
+                    <h4 class="media-heading"><strong>{{video.titolo}}</strong></h4>
+                </a>
+
+            </li>
+        </ul>
+
+    </div>
